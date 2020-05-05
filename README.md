@@ -8,7 +8,7 @@ Prerequisites
 
 Build
 ===========
-* [clone the PDFsam repository](https://help.github.com/articles/cloning-a-repository/)      
+* [clone the PlayerFX repository](https://help.github.com/articles/cloning-a-repository/)      
 * run one of the following commands from the project root:  
 **Build and install the jars in the local repository executing all the unit test:**   
 `./gradlew build`    
