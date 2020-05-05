@@ -91,14 +91,16 @@ public class MediaControls extends HBox {
         HBox.setHgrow(timeSlider, Priority.ALWAYS);
         timeSlider.setMinWidth(50);
         timeSlider.setMaxWidth(Double.MAX_VALUE);
+
+        // In order to jump to the certain part of video
         timeSlider.valueProperty().addListener(new InvalidationListener() {
             public void invalidated(Observable ov) {
-                if (timeSlider.isValueChanging()) {
-                    // multiply duration by percentage calculated by slider position
-                    player.seek(duration.multiply(timeSlider.getValue() / 100.0));
+                if (timeSlider.isPressed()) {
+                    player.seek(player.getMedia().getDuration().multiply(timeSlider.getValue() / 100));
                 }
             }
         });
+
         this.getChildren().add(timeSlider);
 
         // Add Play label

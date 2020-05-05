@@ -17,5 +17,3 @@ Run
 ===========
 Once you built the artifacts you can find the zip bundle 
 in the `distributions` directory of the `build` output folder, unzip it somewhere and run it using the provided script in the `bin` subdirectory.    
-
-

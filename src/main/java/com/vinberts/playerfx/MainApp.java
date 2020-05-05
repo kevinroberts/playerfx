@@ -2,8 +2,6 @@ package com.vinberts.playerfx;
 
 import com.goxr3plus.fxborderlessscene.borderless.BorderlessScene;
 import javafx.application.Application;
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -31,21 +29,13 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        //Create a Top Label
-        Label topLabel = new Label("Player/FX");
-        topLabel.setMinHeight(50);
-        topLabel.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        topLabel.setStyle("-fx-background-color:#303030; -fx-text-fill:white; -fx-font-weight:bold;");
-        topLabel.setAlignment(Pos.CENTER);
-
-
         MenuItem open = new MenuItem("Open");
         open.setAccelerator(new KeyCodeCombination(KeyCode.O, KeyCombination.SHORTCUT_DOWN));
         MenuItem exit = new MenuItem("Exit");
         exit.setAccelerator(new KeyCodeCombination(KeyCode.Q, KeyCombination.SHORTCUT_DOWN));
+
         Menu file = new Menu("File");
         MenuBar menu = new MenuBar();
-
 
         // Connecting the above menu
         file.getItems().add(open);
