@@ -64,11 +64,12 @@ public class MainApp extends Application {
         });
 
         // here you can choose any video
-        player = new Player(getClass().getResource("/com/vinberts/playerfx/video.mp4").toURI().toString(), menu);
+        player = new Player(getClass().getResource("video.mp4").toURI().toString(), menu);
 
         // Constructor using your primary stage and the root Parent of your content.
         scene = new BorderlessScene(primaryStage, StageStyle.UNDECORATED, player, 800, 545);
         primaryStage.setScene(scene); // Set the scene to your stage and you're done!
+        scene.removeDefaultCSS();
         // To move the window around by pressing a node:
         scene.setMoveControl(menu);
 
